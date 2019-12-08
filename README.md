@@ -32,7 +32,7 @@ Things you may want to cover:
  |groups_id|integer|foreign_key: true|
  ### Association
  - belongs_to :groups_users
-
+ ### end
 
  ##groupsテーブル
  |Column|Type|Options|
