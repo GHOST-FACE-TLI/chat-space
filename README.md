@@ -69,7 +69,7 @@ Things you may want to cover:
  |------|----|-------|
  |id|integer|null: false|
  |users_id|integer|null: false|
- |groups_id|integer|null:false|
+ |groups_id|integer|null: false|
  
  ### Association
  - belongs_to :group
