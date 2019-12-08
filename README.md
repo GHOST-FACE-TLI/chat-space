@@ -27,8 +27,8 @@ Things you may want to cover:
  |Column|Type|Options|
  |------|----|-------|
  |id|integer|null: false, unique: true|
- |email|integer|null: false, unique: true|
- |pasword|string|/\A[a-z\d]{8,100}+\z/i,\w+([-+.]\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*$|
+ |email|integer|null: false, unique: true,\w+([-+.]\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*$|
+ |pasword|string|/\A[a-z\d]{8,100}+\z/i|
  |nickname|string|.{3,}|
  |groups_id|integer|foreign_key: true|
  ### Association
