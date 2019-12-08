@@ -41,10 +41,10 @@ Things you may want to cover:
  |------|----|-------|
  |id|integer|null: false, unique: true|
  |group_name|string|null: false| 
- |users_id|integer|null: false, foreign_key: true|
- |member_id|integer|null: false, foreign_key: true|
+ |user_id|integer|null: false, foreign_key: true|
+ |members_id|integer|null: false, foreign_key: true|
  ### Association
- - has_many :users_id, through: :groups_users
+ - has_many :members_id, through: :groups_users
  - has_many :messages
 
  ## messages table
