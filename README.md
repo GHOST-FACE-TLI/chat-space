@@ -21,6 +21,8 @@ Things you may want to cover:
 
 * Deployment instructions
 
+* ...
+
  ##usersテーブル
 
  |Column|Type|Options|
@@ -33,8 +35,9 @@ Things you may want to cover:
  ### Association
  - belongs_to :groups_users
  
+
  ##groupsテーブル
- 
+
  |Column|Type|Options|
  |------|----|-------|
  |id|integer|null: false, unique: true|
@@ -43,6 +46,7 @@ Things you may want to cover:
  
  ### Association
  - belongs_to :groups_users
+
 
  ##messagesテーブル
  
@@ -57,6 +61,7 @@ Things you may want to cover:
  ### Association
  - belongs_to :group
  - belongs_to :user
+
 
  ##groups_usersテーブル
  
