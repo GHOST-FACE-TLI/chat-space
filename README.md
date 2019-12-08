@@ -23,29 +23,32 @@ Things you may want to cover:
 
 * ...
 
- ## usersテーブル
+ ## users table
  |Column|Type|Options|
  |------|----|-------|
  |id|integer|null: false, unique: true|
- |email|integer|null: false, unique: true,\w+([-+.]\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*$|
- |pasword|string|/\A[a-z\d]{8,100}+\z/i|
- |nickname|string|.{3,}|
+ |email|integer|null: false, unique: true|
+ |pasword|string|null,false,/\A[a-z\d]{8,100}+\z/i|
+ |nickname|string|index: true, null: false, unique: true|
  |groups_id|integer|foreign_key: true|
- ### Association
- - belongs_to :groups_users
- 
 
- ## groupsテーブル
+ ### Association
+ - has_many :groups_users
+ - has_many :messages
+
+
+ ## groups table
  |Column|Type|Options|
  |------|----|-------|
  |id|integer|null: false, unique: true|
  |group_name|string|null: false| 
  |users_id|integer|null: false, foreign_key: true|
+ |member_id|integer|null: false, foreign_key: true|
  ### Association
- - belongs_to :groups_users
+ - has_many :groups_users
+ - has_many :messages
 
-
- ## messagesテーブル
+ ## messages table
  |Column|Type|Options|
  |------|----|-------|
  |id|integer|null: false, unique: true|
@@ -57,7 +60,7 @@ Things you may want to cover:
  - belongs_to :group
  - belongs_to :user
 
- ## groups_usersテーブル
+ ## groups_users table
  |Column|Type|Options|
  |------|----|-------|
  |id|integer|null: false, unique: true|
