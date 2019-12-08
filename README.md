@@ -28,7 +28,7 @@ Things you may want to cover:
  |------|----|-------|
  |id|integer|null: false, unique: true|
  |email|integer|null: false, unique: true|
- |pasword|string|null,false,/\A[a-z\d]{8,100}+\z/i|
+ |pasword|string|null,false|
  |nickname|string|index: true, null: false, unique: true|
  |groups_id|integer|foreign_key: true|
 
