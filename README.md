@@ -32,18 +32,20 @@ Things you may want to cover:
  |groups_id|integer|foreign_key: true|
  ### Association
  - belongs_to :groups_users
- ### end
-
+ 
  ##groupsテーブル
+ 
  |Column|Type|Options|
  |------|----|-------|
  |id|integer|null: false, unique: true|
  |group_name|text|null: false| 
  |users_id|integer|null: false, foreign_key: true|
+ 
  ### Association
  - belongs_to :groups_users
 
  ##messagesテーブル
+ 
  |Column|Type|Options|
  |------|----|-------|
  |id|integer|null: false, unique: true|
@@ -51,16 +53,19 @@ Things you may want to cover:
  |image|string|null: false|
  |group_id|integer|null: false, foreign_key: true|
  |user_id|integer|null: false, foreign_key: true|
+ 
  ### Association
  - belongs_to :group
  - belongs_to :user
 
  ##groups_usersテーブル
+ 
  |Column|Type|Options|
  |------|----|-------|
  |id|integer|null: false|
  |users_id|integer|null: false|
  |groups_id|integer|null:false|
+ 
  ### Association
  - belongs_to :group
  - belongs_to :user
