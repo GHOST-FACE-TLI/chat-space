@@ -23,7 +23,7 @@ Things you may want to cover:
 
 * ...
 
- ##usersテーブル
+ ## usersテーブル
 
  |Column|Type|Options|
  |------|----|-------|
@@ -36,7 +36,7 @@ Things you may want to cover:
  - belongs_to :groups_users
  
 
- ##groupsテーブル
+ ## groupsテーブル
 
  |Column|Type|Options|
  |------|----|-------|
@@ -48,7 +48,7 @@ Things you may want to cover:
  - belongs_to :groups_users
 
 
- ##messagesテーブル
+ ## messagesテーブル
  
  |Column|Type|Options|
  |------|----|-------|
@@ -63,7 +63,7 @@ Things you may want to cover:
  - belongs_to :user
 
 
- ##groups_usersテーブル
+ ## groups_usersテーブル
  
  |Column|Type|Options|
  |------|----|-------|
