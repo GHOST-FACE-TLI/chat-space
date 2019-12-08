@@ -31,9 +31,8 @@ Things you may want to cover:
  |pasword|string|null,false|
  |nickname|string|index: true, null: false, unique: true|
  |groups_id|integer|foreign_key: true|
-
  ### Association
- - has_many :groups_users
+ - has_many :groups_id, through: :groups_users
  - has_many :messages
 
 
@@ -45,7 +44,7 @@ Things you may want to cover:
  |users_id|integer|null: false, foreign_key: true|
  |member_id|integer|null: false, foreign_key: true|
  ### Association
- - has_many :groups_users
+ - has_many :users_id, through: :groups_users
  - has_many :messages
 
  ## messages table
