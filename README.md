@@ -39,7 +39,7 @@ Things you may want to cover:
  |Column|Type|Options|
  |------|----|-------|
  |id|integer|null: false, unique: true|
- |group_name|text|null: false| 
+ |group_name|string|null: false| 
  |users_id|integer|null: false, foreign_key: true|
  ### Association
  - belongs_to :groups_users
@@ -50,7 +50,7 @@ Things you may want to cover:
  |------|----|-------|
  |id|integer|null: false, unique: true|
  |body|text|null: false|
- |image|string|null: false|
+ |image|string||
  |group_id|integer|null: false, foreign_key: true|
  |user_id|integer|null: false, foreign_key: true|
  ### Association
