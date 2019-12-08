@@ -26,7 +26,6 @@ Things you may want to cover:
  ## users table
  |Column|Type|Options|
  |------|----|-------|
- |id|integer|null: false, unique: true|
  |email|integer|null: false, unique: true|
  |pasword|string|null,false|
  |nickname|string|index: true, null: false, unique: true|
@@ -38,8 +37,7 @@ Things you may want to cover:
  ## groups table
  |Column|Type|Options|
  |------|----|-------|
- |id|integer|null: false, unique: true|
- |group_name|string|null: false| 
+ |name|string|null: false| 
  ### Association
  - has_many :users, through: :groups_users
  - has_many :groups_users
@@ -48,11 +46,10 @@ Things you may want to cover:
  ## messages table
  |Column|Type|Options|
  |------|----|-------|
- |id|integer|null: false, unique: true|
  |body|text||
  |image|string||
- |group_id|integer|null: false, foreign_key: true|
- |user_id|integer|null: false, foreign_key: true|
+ |group|references|null: false, foreign_key: true|
+ |user|references|null: false, foreign_key: true|
  ### Association
  - belongs_to :group
  - belongs_to :user
@@ -60,9 +57,8 @@ Things you may want to cover:
  ## groups_users table
  |Column|Type|Options|
  |------|----|-------|
- |id|integer|null: false, unique: true|
- |user_id|integer|null: false, foreign_key: true|
- |group_id|integer|null: false, foreign_key: true|
+ |user|references|null: false, foreign_key: true|
+ |group|references|null: false, foreign_key: true|
  ### Association
  - belongs_to :group
  - belongs_to :user
