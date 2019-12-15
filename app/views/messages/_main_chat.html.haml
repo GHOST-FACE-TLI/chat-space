@@ -1,0 +1,38 @@
+.chat-main
+  .chat-main__header
+    .group-name
+      Group1
+      .group-name--member
+        yuki
+    .edit-btn
+      =link_to "#", class: "chat-edit__btn" do
+        Edit
+
+
+  .message
+    .message__post
+      .message__post__name
+        yuki
+        .message__post__name--time
+          2019/12/14(sun) 13:16:21
+      .message__post__comment
+        サンプルコメント１
+      .message__post__name
+        yuki
+        .message__post__name--time
+          2019/12/14(sun) 13:24:11
+      .message__post__comment
+        メロスは激怒した。
+
+
+  .message-form
+    .input-box
+      .input-box__text
+        %input(placeholder="type a message" class="input-box__text" type="text")
+        .input-box__text__image
+          %label{class: ".input-box__text__image"}
+            = icon('fas', 'image')
+            %input(class="input-box__text__image__file" type="file")
+
+    .send-btn
+      Send

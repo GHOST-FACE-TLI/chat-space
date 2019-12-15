@@ -1,0 +1,20 @@
+.sidebar
+  .sidebar__header
+    .user-name
+      .user-name--box
+        yuki
+      .user-name--icon
+        =link_to "#", class: "sidebar__btn" do
+          = icon('fas', 'edit',  class: "sidebar__btn--icon")
+        =link_to "#", class: "sidebar__btn" do
+          = icon('fas', 'cog',  class: "sidebar__btn--icon")
+
+  .group-list
+    .group-list__subject
+      Group1
+    .group-list__comment
+      テストテストテスト
+    .group-list__subject
+      Gropu2
+    .group-list__comment
+      test2コメント
