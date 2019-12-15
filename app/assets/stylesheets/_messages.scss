@@ -6,13 +6,18 @@ $UserNameBoxHeight: 20px;
 $UserNameSidePadding: 20px;
 $FontWeight: bold;
 
-$MainEditBtnColor: aqua;
+$MainEditBtnColor: #38aef0;
 $MainEditBtnHeigth:40px;
 $MessageMainColor:#333333;
 $MessageSubColor:#999999;
 $MessageFormHeight: 90px;
 $InputBoxWidth:100%;
 $TextBoxHeight: 50px;
+
+@mixin between() {
+    display: flex;
+    justify-content: space-between;
+  }  
 
 * {
   box-sizing: border-box;
@@ -29,8 +34,7 @@ $TextBoxHeight: 50px;
   }
   &__header{
     height: $HeaderHigth;
-    padding-left:$UserNameSidePadding;
-    padding-right:$UserNameSidePadding;
+    padding:0px #{$UserNameSidePadding};
     color: $SidebarMainColor;
     display: flex;
     align-items: center;
@@ -38,8 +42,7 @@ $TextBoxHeight: 50px;
 .user-name{
     width: calc(#{$SidebarWidht} - #{$UserNameSidePadding * 2});
     height: $UserNameBoxHeight;
-    display: flex;
-    justify-content: space-between;
+    @include between();
     &--box{
       line-height: $UserNameBoxHeight;
       font-weight: $FontWeight;
@@ -74,11 +77,10 @@ $TextBoxHeight: 50px;
   float: left;
   &__header{
     height: $HeaderHigth;
+    padding: 0px 40px;
     border-bottom: 1px solid;
     border-color: #eeeeee;
-    display: flex;
-    padding: 0px 40px;
-    justify-content: space-between;
+    @include between();
   }
   .edit-btn{
   height: $MainEditBtnHeigth;
@@ -111,8 +113,8 @@ $TextBoxHeight: 50px;
       &__name{
         color: $MessageMainColor;
         font-size: 16px;
-        display: flex;
         padding-bottom: 12px;
+        display: flex;
         &--time{
           color: $MessageSubColor;
           font-size: 12px;
@@ -133,8 +135,7 @@ $TextBoxHeight: 50px;
   background-color: #d2d2d2;
   bottom: 0%;
   align-items: center;
-  display: flex;
-  justify-content: space-between;
+  @include between();
 }
 .input-box{
   width: $InputBoxWidth;
