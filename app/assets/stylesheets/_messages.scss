@@ -1,0 +1,167 @@
+$HeaderHigth: 100px;
+$SidebarWidht: 300px;
+
+$SidebarMainColor: #ffffff;
+$UserNameBoxHeight: 20px;
+$UserNameSidePadding: 20px;
+$FontWeight: bold;
+
+$MainEditBtnColor: #38aef0;
+$MainEditBtnHeigth:40px;
+$ChatMessageMainColor:#333333;
+$ChatMessageSubColor:#999999;
+$ChatMessageFormHeight: 90px;
+$InputBoxWidth:100%;
+$TextBoxHeight: 50px;
+
+@mixin between() {
+    display: flex;
+    justify-content: space-between;
+  }  
+
+* {
+  box-sizing: border-box;
+}
+
+.sidebar{
+  height: 100vh;
+  width: $SidebarWidht;
+  float: left;
+  background-color: #253141;
+  &__btn{
+    padding-left: 5px;
+    color: $SidebarMainColor;
+  }
+  &__header{
+    height: $HeaderHigth;
+    padding:0px #{$UserNameSidePadding};
+    color: $SidebarMainColor;
+    display: flex;
+    align-items: center;
+  }
+.user-name{
+    width: calc(#{$SidebarWidht} - #{$UserNameSidePadding * 2});
+    height: $UserNameBoxHeight;
+    @include between();
+    &--box{
+      line-height: $UserNameBoxHeight;
+      font-weight: $FontWeight;
+    }
+    &--icon{
+      height: $UserNameBoxHeight;
+      display: flex;
+    }
+  }
+}
+
+.group-list{
+  background-color: #2f3e51;
+  height: calc(100vh - #{$HeaderHigth});
+  color: $SidebarMainColor;
+  font-weight: $FontWeight;
+    &__subject{
+      padding: 20px 20px 5px 20px; 
+      font-size: 15px;
+    }
+    &__comment{
+      padding: 0px 20px 40px 20px;
+      font-size: 11px;
+    }
+}
+
+
+.chat-main{
+  background-color: #ffffff;
+  height: 100vh;
+  width:  calc(100vw - #{$SidebarWidht});
+  float: left;
+  &__header{
+    height: $HeaderHigth;
+    padding: 0px 40px;
+    border-bottom: 1px solid;
+    border-color: #eeeeee;
+    @include between();
+  }
+  .edit-btn{
+  height: $MainEditBtnHeigth;
+  margin-top: 28px;
+  padding: 0px 20px;
+  border: 1px solid;
+  line-height: $MainEditBtnHeigth;
+  border-color: $MainEditBtnColor;
+  .chat-edit__btn:visited{
+    color: $MainEditBtnColor;  
+  }
+}
+.group-name{
+  color: $ChatMessageMainColor;
+  font-size: 20px;
+  margin-top: 35px;
+    &--member{
+      color: $ChatMessageSubColor;
+      font-size: 12px;
+      margin-top: 15px;
+    }
+}
+}
+.Chat-message{
+  background-color: #fafafa;
+  height: calc(100vh - #{$ChatMessageFormHeight} - #{$HeaderHigth});
+  &__post{
+    padding-top: 35px;
+    padding-left: 40px;
+      &__name{
+        color: $ChatMessageMainColor;
+        font-size: 16px;
+        padding-bottom: 12px;
+        display: flex;
+        &--time{
+          color: $ChatMessageSubColor;
+          font-size: 12px;
+          padding-left: 5px;
+        }
+      }
+      &__comment{
+        color: #434a54;
+        font-size: 14px;
+        padding-bottom: 46px;
+      }
+    }
+  }
+
+.message-form{
+  height: $ChatMessageFormHeight;
+  padding: 10px 40px;
+  background-color: #d2d2d2;
+  bottom: 0%;
+  align-items: center;
+  @include between();
+}
+.input-box{
+  width: $InputBoxWidth;
+  padding-right: 15px;
+  display: flex;
+    &__text{
+    height: $TextBoxHeight;
+    padding-left: 10px;
+    width: $InputBoxWidth;
+    position: relative;
+    &__image{
+      position: absolute;
+      font-size: 1.3rem;
+      right: 10px;
+      top: 10px;
+      &__file{
+        display: none;
+      }
+    }
+  }
+}
+.send-btn{
+  height: $TextBoxHeight;
+  width: 100px;
+  line-height: $TextBoxHeight;
+  color: #ffffff;
+  background-color: #38aef0;
+  text-align: center;
+}
