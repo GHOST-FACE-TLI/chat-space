@@ -2,11 +2,11 @@
   .sidebar__header
     .user-name
       .user-name--box
-        yuki
+        = current_user.name
       .user-name--icon
         =link_to "#", class: "sidebar__btn" do
           = icon('fas', 'edit',  class: "sidebar__btn--icon")
-        =link_to "#", class: "sidebar__btn" do
+        =link_to edit_user_path(current_user) do
           = icon('fas', 'cog',  class: "sidebar__btn--icon")
 
   .group-list
