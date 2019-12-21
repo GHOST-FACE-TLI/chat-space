@@ -49,7 +49,7 @@ $TextBoxHeight: 50px;
     }
     &--icon{
       height: $UserNameBoxHeight;
-      display: flex;
+      display: flex;  
     }
   }
 }
@@ -57,7 +57,6 @@ $TextBoxHeight: 50px;
 .group-list{
   background-color: #2f3e51;
   height: calc(100vh - #{$HeaderHigth});
-  color: $SidebarMainColor;
   font-weight: $FontWeight;
     &__subject{
       padding: 20px 20px 5px 20px; 
@@ -67,6 +66,9 @@ $TextBoxHeight: 50px;
       padding: 0px 20px 40px 20px;
       font-size: 11px;
     }
+.group-list-btn:visited{
+  color: $SidebarMainColor;  
+}
 }
 
 
