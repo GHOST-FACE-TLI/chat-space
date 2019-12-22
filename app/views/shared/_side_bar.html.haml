@@ -6,13 +6,13 @@
       .user-name--icon
         =link_to new_group_path, class: "sidebar__btn" do
           = icon('fas', 'edit',  class: "sidebar__btn--icon")
-        =link_to edit_user_path(current_user) do
+        =link_to edit_user_path(current_user),class: "sidebar__btn" do
           = icon('fas', 'cog',  class: "sidebar__btn--icon")
 
   .group-list
     - current_user.groups.each do |group|
-      = link_to '#', class:"group-list-btn" do
+      = link_to group_messages_path(group), class:"group-list-btn" do
         .group-list__subject
           = group.name
         .group-list__comment
-          メッセージはまだありません
+          = group.show_last_message
