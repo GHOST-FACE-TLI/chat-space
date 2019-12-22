@@ -6,7 +6,7 @@
       .user-name--icon
         =link_to new_group_path, class: "sidebar__btn" do
           = icon('fas', 'edit',  class: "sidebar__btn--icon")
-        =link_to edit_user_path(current_user) do
+        =link_to edit_user_path(current_user),class: "sidebar__btn" do
           = icon('fas', 'cog',  class: "sidebar__btn--icon")
 
   .group-list

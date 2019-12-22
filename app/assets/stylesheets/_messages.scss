@@ -58,6 +58,7 @@ $TextBoxHeight: 50px;
   background-color: #2f3e51;
   height: calc(100vh - #{$HeaderHigth});
   font-weight: $FontWeight;
+  overflow: scroll;
     &__subject{
       padding: 20px 20px 5px 20px; 
       font-size: 15px;
@@ -66,6 +67,9 @@ $TextBoxHeight: 50px;
       padding: 0px 20px 40px 20px;
       font-size: 11px;
     }
+.group-list-btn:link{
+  color: $SidebarMainColor;
+}
 .group-list-btn:visited{
   color: $SidebarMainColor;  
 }
@@ -91,6 +95,9 @@ $TextBoxHeight: 50px;
   border: 1px solid;
   line-height: $MainEditBtnHeigth;
   border-color: $MainEditBtnColor;
+  .chat-edit__btn:link{
+    color: $MainEditBtnColor;
+  }
   .chat-edit__btn:visited{
     color: $MainEditBtnColor;  
   }
