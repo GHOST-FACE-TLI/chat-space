@@ -8,31 +8,20 @@
       =link_to "#", class: "chat-edit__btn" do
         Edit
 
-
   .Chat-message
     .Chat-message__post
-      .Chat-message__post__name
-        yuki
-        .Chat-message__post__name--time
-          2019/12/14(sun) 13:16:21
-      .Chat-message__post__comment
-        サンプルコメント１
-      .Chat-message__post__name
-        yuki
-        .Chat-message__post__name--time
-          2019/12/14(sun) 13:24:11
-      .Chat-message__post__comment
-        サンプルコメント２
-
+      = render @messages
+  
 
   .message-form
-    .input-box
-      .input-box__text
-        %input(placeholder="type a message" class="input-box__text" type="text")
-        .input-box__text__image
-          %label{class: ".input-box__text__image"}
-            = icon('fas', 'image')
-            %input(class="input-box__text__image__file" type="file")
+    = form_for [@group, @message] do |f|
+      .input-box
+        .input-box__text
+          = f.text_field :content, class: 'input-box__text', placeholder: 'type a message'
+          .input-box__text__image
+            = f.label :image,class: 'input-box__text__image' do
+              = icon('fas', 'image')
+              = f.file_field :image, class: 'input-box__text__image__file'
 
-    .send-btn
-      Send
+      .send-btn
+        = f.submit 'Send', class: 'send-btn__icon'
