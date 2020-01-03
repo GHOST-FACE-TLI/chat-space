@@ -115,11 +115,11 @@ $TextBoxHeight: 50px;
 }
 .Chat-message{
   background-color: #fafafa;
-  height: calc(100vh - #{$ChatMessageFormHeight} - #{$HeaderHigth});
-  overflow: scroll;
   &__post{
     padding-top: 35px;
     padding-left: 40px;
+    height: calc(100vh - #{$ChatMessageFormHeight} - #{$HeaderHigth});
+    overflow: scroll;  
       &__name{
         color: $ChatMessageMainColor;
         font-size: 16px;
