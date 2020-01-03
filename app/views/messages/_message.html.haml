@@ -1,7 +1,8 @@
 .Chat-message__post__name
   = message.user.name
   .Chat-message__post__name--time
-    = message.created_at.strftime("%Y/%m/%d %H:%M")
+    - datetime = message.created_at
+    = datetime.to_s
 .Chat-message__post__comment
   - if message.content.present?
     = message.content
