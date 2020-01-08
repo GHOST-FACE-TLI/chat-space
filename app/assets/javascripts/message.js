@@ -65,6 +65,6 @@ $(function(){
     });
   };
   if (document.location.href.match(/\/groups\/\d+\/messages/)){
-    setInterval(reloadMessages, 4000);
+    setInterval(reloadMessages, 7000);
   }
 });
