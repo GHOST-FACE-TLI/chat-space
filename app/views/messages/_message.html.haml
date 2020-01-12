@@ -6,5 +6,5 @@
 .Chat-message__post__comment{data: {message: {id: message.id}}}
   - if message.content.present?
     = message.content
-    .lower-message__image
-      = image_tag message.image.url, class: 'lower-message__image' if message.image.present?
+  .image
+  = image_tag message.image.url, class: 'lower-message__image' if message.image.present?
